@@ -1,6 +1,7 @@
 package ro.jademy.librarymgmt;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Main {
@@ -21,6 +22,9 @@ public class Main {
         Book book5 = new Book("Don't Wake Up: The most gripping first chapter you will ever read!",
                 "Liz Lawler", "Twenty7 (5 Oct. 2017)", "1785770578", 368,
                 "English", "Psychological");
+        Book book6 = new Book("Dune",
+                "Frank Herbert", "Ace Books", "059309932X", 688,
+                "English", "Science Fiction");
         ArrayList<Book> books = new ArrayList<>();
         ArrayList<Shelf> shelves = new ArrayList<>();
         //Shelf shelf = new Shelf(books, book1.genre);
@@ -30,12 +34,27 @@ public class Main {
         library.addBook(book3);
         library.addBook(book4);
         library.addBook(book5);
+        library.addBook(book6);
         //Shelf shelf = new Shelf(books, book1.genre);
         books.add(book1);
         library.printLibraryBooks();
         System.out.println();
         System.out.println();
         System.out.println();
+
+
+        //reading the option from scanner
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\nWelcome to the Public Library");
+        LibraryMenu.printLibraryMenu();
+        System.out.print("Please choose an option (1-7): ");
+
+        int option = scanner.nextInt();
+
+
+
+
+
 
         //library.searchBook("Riding the Waves: My Story");
         //library.printShelves();
