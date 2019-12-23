@@ -4,19 +4,29 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
-public class Main {
+public class Main
+{
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException
+    {
+
+
+        //create
+
 
         System.out.println("\nWelcome to the Public Library");
         Scanner scanner = new Scanner(System.in);
-        LibraryMenu.printLibraryMenu();
-        System.out.print("Please choose an option: ");
-        int option = scanner.nextInt();
+        boolean menuExit = false;
+
+        while (!menuExit)
+        {
+            LibraryMenu.printLibraryMenu();
+            System.out.print("Please choose an option: ");
+            int option = scanner.nextInt();
 
 
-        while (option != 3) {
-            switch (option) {
+            switch (option)
+            {
                 case 1:
                     ManagerMenu.managerMenu();
                     break;
